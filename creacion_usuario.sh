@@ -2,4 +2,4 @@
 
 clear
 
-
+fichero="usuario_ejemplo.ldif"
