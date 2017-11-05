@@ -4,7 +4,7 @@ clear
 
 fichero="usuario_ejemplo.ldif"
 ruta="ou=People,dc=lopez,dc=gonzalonazareno,dc=org"
-grupo="2000"
+grupo="ID del grupo en la que va ha ser almacenado"
 clave="clave del administrador de LDAP"
 
 read -p "Introduce un nombre de usuario sin tildes: " nombre
