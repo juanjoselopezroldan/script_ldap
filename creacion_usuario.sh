@@ -45,4 +45,11 @@ echo "givenName: $pila" >> $fichero
 
 ldapadd -x -D cn=admin,dc=lopez,dc=gonzalonazareno,dc=org -w $clave -f $fichero #> /tmp/null 2>&1
 
+if [ $? -eq 0 ]; then
+        echo "Usuario creado satisfactoriamente en el LDAP"
+        echo " "
+else
+        echo "El usuario $nombre no puede ser creado por que ya existe"
+fi
 
+ldapsearch -xLLL -b $ruta uid=$nombre
