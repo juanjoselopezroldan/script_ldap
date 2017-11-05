@@ -27,3 +27,18 @@ uid=`expr $uid + 1`
 mkdir /home/nfs/$nombre
 chown $uid:$grupo -R /home/nfs/$nombre
 
+echo "dn: uid=$nombre,$ruta" > $fichero
+echo "objectClass: top" >> $fichero
+echo "objectClass: posixAccount" >> $fichero
+echo "objectClass: inetOrgPerson" >> $fichero
+echo "objectClass: person" >> $fichero
+echo "cn:: $var2" >> $fichero
+echo "uid: $nombre" >> $fichero
+echo "uidNumber: $uid" >> $fichero
+echo "gidNumber: $grupo" >> $fichero
+echo "homeDirectory: /home/nfs/$nombre" >> $fichero
+echo "loginShell: /bin/bash" >> $fichero
+echo "userPassword: $var" >> $fichero
+echo "sn:: $var1" >> $fichero
+echo "mail: $correo" >> $fichero
+echo "givenName: $pila" >> $fichero
