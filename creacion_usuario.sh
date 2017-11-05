@@ -15,3 +15,7 @@ read -p "Introduce tu correo electronico: " correo
 
 echo "Introduce una clave: "
 var=$(slappasswd -v)
+
+var1=$(echo $apellido | base64)
+
+var2=$(echo $nombreapellido | base64)
