@@ -42,3 +42,7 @@ echo "userPassword: $var" >> $fichero
 echo "sn:: $var1" >> $fichero
 echo "mail: $correo" >> $fichero
 echo "givenName: $pila" >> $fichero
+
+ldapadd -x -D cn=admin,dc=lopez,dc=gonzalonazareno,dc=org -w $clave -f $fichero #> /tmp/null 2>&1
+
+
