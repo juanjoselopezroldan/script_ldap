@@ -19,3 +19,7 @@ var=$(slappasswd -v)
 var1=$(echo $apellido | base64)
 
 var2=$(echo $nombreapellido | base64)
+
+uid=$(ldapsearch -xLLL -b "ou=People,dc=lopez,dc=gonzalonazareno,dc=org" "objectClass=inetorgperson" | grep "uidNumber" | cut -d ":" -f 2 | tail -1)
+
+uid=`expr $uid + 1`
