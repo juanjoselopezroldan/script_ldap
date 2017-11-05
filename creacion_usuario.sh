@@ -50,6 +50,7 @@ if [ $? -eq 0 ]; then
         echo " "
 else
         echo "El usuario $nombre no puede ser creado por que ya existe"
+        echo " "
 fi
 
 ldapsearch -xLLL -b $ruta uid=$nombre
